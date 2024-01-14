@@ -243,6 +243,7 @@ class DPCode(StrEnum):
     PM25_VALUE = "pm25_value"
     POWDER_SET = "powder_set"  # Powder
     POWER = "power"
+    POWER_A = "power_a"
     POWER_GO = "power_go"
     PRESENCE_STATE = "presence_state"
     PRESSURE_STATE = "pressure_state"

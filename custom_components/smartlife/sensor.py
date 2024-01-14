@@ -681,6 +681,14 @@ SENSORS: dict[str, tuple[SmartLifeSensorEntityDescription, ...]] = {
             subkey="power",
         ),
         SmartLifeSensorEntityDescription(
+            key=DPCode.POWER_A,
+            name="Phase A power",
+            device_class=SensorDeviceClass.POWER,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfPower.KILO_WATT,
+            subkey="power",
+        ),
+        SmartLifeSensorEntityDescription(
             key=DPCode.PHASE_A,
             name="Phase A voltage",
             device_class=SensorDeviceClass.VOLTAGE,
