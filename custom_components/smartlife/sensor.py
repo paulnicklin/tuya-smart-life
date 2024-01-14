@@ -659,28 +659,6 @@ SENSORS: dict[str, tuple[SmartLifeSensorEntityDescription, ...]] = {
     # https://developer.tuya.com/en/docs/iot/smart-meter?id=Kaiuz4gv6ack7
     "zndb": (
         SmartLifeSensorEntityDescription(
-            key=DPCode.FORWARD_ENERGY_TOTAL,
-            name="Total energy",
-            device_class=SensorDeviceClass.ENERGY,
-            state_class=SensorStateClass.TOTAL_INCREASING,
-        ),
-        SmartLifeSensorEntityDescription(
-            key=DPCode.PHASE_A,
-            name="Phase A current",
-            device_class=SensorDeviceClass.CURRENT,
-            native_unit_of_measurement=UnitOfElectricCurrent.AMPERE,
-            state_class=SensorStateClass.MEASUREMENT,
-            subkey="electriccurrent",
-        ),
-        SmartLifeSensorEntityDescription(
-            key=DPCode.PHASE_A,
-            name="Phase A power",
-            device_class=SensorDeviceClass.POWER,
-            state_class=SensorStateClass.MEASUREMENT,
-            native_unit_of_measurement=UnitOfPower.KILO_WATT,
-            subkey="power",
-        ),
-        SmartLifeSensorEntityDescription(
             key=DPCode.POWER_A,
             name="Phase A power",
             device_class=SensorDeviceClass.POWER,
@@ -688,62 +666,7 @@ SENSORS: dict[str, tuple[SmartLifeSensorEntityDescription, ...]] = {
             native_unit_of_measurement=UnitOfPower.KILO_WATT,
             subkey="power",
         ),
-        SmartLifeSensorEntityDescription(
-            key=DPCode.PHASE_A,
-            name="Phase A voltage",
-            device_class=SensorDeviceClass.VOLTAGE,
-            state_class=SensorStateClass.MEASUREMENT,
-            native_unit_of_measurement=UnitOfElectricPotential.VOLT,
-            subkey="voltage",
-        ),
-        SmartLifeSensorEntityDescription(
-            key=DPCode.PHASE_B,
-            name="Phase B current",
-            device_class=SensorDeviceClass.CURRENT,
-            native_unit_of_measurement=UnitOfElectricCurrent.AMPERE,
-            state_class=SensorStateClass.MEASUREMENT,
-            subkey="electriccurrent",
-        ),
-        SmartLifeSensorEntityDescription(
-            key=DPCode.PHASE_B,
-            name="Phase B power",
-            device_class=SensorDeviceClass.POWER,
-            state_class=SensorStateClass.MEASUREMENT,
-            native_unit_of_measurement=UnitOfPower.KILO_WATT,
-            subkey="power",
-        ),
-        SmartLifeSensorEntityDescription(
-            key=DPCode.PHASE_B,
-            name="Phase B voltage",
-            device_class=SensorDeviceClass.VOLTAGE,
-            state_class=SensorStateClass.MEASUREMENT,
-            native_unit_of_measurement=UnitOfElectricPotential.VOLT,
-            subkey="voltage",
-        ),
-        SmartLifeSensorEntityDescription(
-            key=DPCode.PHASE_C,
-            name="Phase C current",
-            device_class=SensorDeviceClass.CURRENT,
-            native_unit_of_measurement=UnitOfElectricCurrent.AMPERE,
-            state_class=SensorStateClass.MEASUREMENT,
-            subkey="electriccurrent",
-        ),
-        SmartLifeSensorEntityDescription(
-            key=DPCode.PHASE_C,
-            name="Phase C power",
-            device_class=SensorDeviceClass.POWER,
-            state_class=SensorStateClass.MEASUREMENT,
-            native_unit_of_measurement=UnitOfPower.KILO_WATT,
-            subkey="power",
-        ),
-        SmartLifeSensorEntityDescription(
-            key=DPCode.PHASE_C,
-            name="Phase C voltage",
-            device_class=SensorDeviceClass.VOLTAGE,
-            state_class=SensorStateClass.MEASUREMENT,
-            native_unit_of_measurement=UnitOfElectricPotential.VOLT,
-            subkey="voltage",
-        ),
+  
     ),
     # Circuit Breaker
     # https://developer.tuya.com/en/docs/iot/dlq?id=Kb0kidk9enyh8
